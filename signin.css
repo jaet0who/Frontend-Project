@@ -51,7 +51,7 @@ header
 main
 {
     display: flex;
-    height: 95%;
+    height: 94%;
     width: 100%;
     
 }
@@ -70,8 +70,8 @@ main
    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    justify-content: center;
    align-items: center;
-   border-left: 1px solid rgba(255,255,255,0.2);
-   box-shadow: black 0px 0px 12px;
+   border-left: none;
+   box-shadow: black 0px 0px 20px;
    opacity: 0;
    animation: fadeIn 0.8s ease-out forwards;
 }
@@ -113,7 +113,7 @@ main
     }
 }
 
-.admin-btn, .cus-btn
+.admin-btn, .cus-btn, .explore-btn
 {
     cursor: pointer;
     background: rgb(75, 2, 2);
@@ -123,7 +123,6 @@ main
     border-radius: 12px;
     color: white;
     margin: 3%;
-    padding: 4%;
     font-size: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.25), 0 0 6px rgba(73, 4, 4, 0.5);
     animation: slideUp 0.6s ease-out forwards;
@@ -143,7 +142,7 @@ main
     }
 }
 
-.admin-btn:hover, .cus-btn:hover
+.admin-btn:hover, .cus-btn:hover, .explore-btn:hover
 {
     transform: scale(1.1);
     transition: transform 0.4s ease;
