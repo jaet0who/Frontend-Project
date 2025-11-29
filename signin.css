@@ -23,7 +23,25 @@ header
     color: white;
     display: flex;
     flex-direction: row;
+    padding-left: 2%;
+    border-top: 3px black solid;
+}
 
+.header-btn
+{
+    cursor: pointer;
+    color: white;
+    background-color:rgb(48, 24, 13); 
+    border: none;
+    margin-right: 2%;
+    width: 80px;
+}
+
+.header-btn:hover
+{
+    text-decoration: underline;
+    border: white 1px solid;
+    transition: 0.4s ease;
 }
 
 .left, .right
@@ -35,7 +53,10 @@ main
     display: flex;
     height: 95%;
     width: 100%;
+    
 }
+
+
 
 .right
 {
@@ -45,19 +66,26 @@ main
    backdrop-filter: blur(5px);
    color: white;
    padding: 10%;
-   height: 56%;
    width: 30%;
    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    justify-content: center;
    align-items: center;
    border-left: 1px solid rgba(255,255,255,0.2);
+   box-shadow: black 0px 0px 12px;
+   opacity: 0;
+   animation: fadeIn 0.8s ease-out forwards;
 }
 
-.right:hover
+@keyframes fadeIn
 {
-    box-shadow: black 0px 0px 12px;
-    transition: box-shadow 0.4s ease;
-    
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
 }
 
 .left
@@ -67,10 +95,22 @@ main
    color: white;
    padding: 10%;
    width: 70%;
-   height: 81.4%;
    justify-content: left;
    align-items: left;
-   background: rgba(48, 35, 25, 0.2)
+   background: rgba(48, 35, 25, 0.2);
+   box-shadow: black 0px 0px 12px;
+   animation: slideIn 0.8s ease-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .admin-btn, .cus-btn
@@ -86,6 +126,21 @@ main
     padding: 4%;
     font-size: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.25), 0 0 6px rgba(73, 4, 4, 0.5);
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .admin-btn:hover, .cus-btn:hover
@@ -99,12 +154,13 @@ main
 
 footer
 {
-    padding: 5%;
+    padding: 3%;
     background-color: rgb(48, 24, 13);
     color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
+    border-left: 3px black solid;
+    border-right: 3px black solid;
 
 }
 
