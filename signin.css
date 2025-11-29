@@ -1,0 +1,109 @@
+
+html, body
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-image: url(lib\ bg.jpeg);
+    font-family: 'Poppins', sans-serif;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+header
+{
+    height: 5%;
+    width: 100%;
+    background-color: rgb(48, 24, 13);
+    color: white;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.left, .right
+{
+   padding: 30%;
+}
+main
+{
+    display: flex;
+    height: 95%;
+    width: 100%;
+}
+
+.right
+{
+   display: flex;
+   flex-direction: column;
+   background-color: rgba(20, 9, 2, 0.8);
+   backdrop-filter: blur(5px);
+   color: white;
+   padding: 10%;
+   height: 78.5%;
+   width: 50%;
+   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   justify-content: left;
+   align-items: left;
+   border-left: 1px solid rgba(255,255,255,0.2);
+
+
+}
+
+.left
+{
+   display: flex;
+   flex-direction: column;
+   color: white;
+   padding: 10%;
+   width: 50%;
+   height: 100%;
+}
+
+.admin-btn, .cus-btn
+{
+    cursor: pointer;
+    background: linear-gradient(135deg, #c9732c, #d3843b);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    margin: 3%;
+    padding: 4%;
+    font-size: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25), 0 0 6px rgba(255,165,90,0.5);
+}
+
+.admin-btn:hover, .cus-btn:hover
+{
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
+    box-shadow: rgb(241, 150, 32) 0px 0px 6px;
+
+
+}
+
+footer
+{
+    padding: 10%;
+    background-color: rgb(48, 24, 13);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+
+}
+
+.footer-left
+{
+   margin-left: 40%;
+}
+
+.footer-right
+{
+    margin-left: 10%
+}
