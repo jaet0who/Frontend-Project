@@ -5,10 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Administrator Login</title>
         <link rel="stylesheet" href="adminLogin.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header></header>
-        <main><p>Hi from adminLogin.html!</p></main>
-        <footer></footer>
+        <main><div class=container>
+            <form action="" method="post" id="admin-login-page">
+                <!--Only login, if the id id not valid it returns an error-->
+                <h2>Administrator Login</h2>
+                <p>Enter Admin ID:</p>
+                <input class="input" type="text" id="admin-id"placeholder="ID must be numerical..." required>
+                <button class="btn" type="submit" id="valid-btn">Login</button>
+            </form>
+        </div></main>
+        <script src="adminLogin.js"></script>
     </body>
 </html>

@@ -1,0 +1,70 @@
+html, body
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body
+{
+    background-image: url(lib\ bg.jpeg);
+    font-family: 'Poppins', sans-serif;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container
+{
+    background-color:  rgba(0, 0, 0, 0.734);
+    backdrop-filter: blur(5px);
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-family: poppins, sans-serif;
+    box-shadow: black 0px 0px 20px;    
+    border-radius: 10px;
+    margin-top: 10%;
+    margin-bottom: 30%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.input
+{
+    padding: 2%;
+    width: 50%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: white 0px 0px 6px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background:rgba(0, 0, 0, 0.734);
+    color: white;
+}
+
+.btn
+{
+    cursor: pointer;
+    padding: 2%;
+    background: rgb(75, 2, 2);
+    border: none;
+    font-weight: bolder;
+    border-radius: 12px;
+    color: white;
+    margin: 3%;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25), 0 0 6px rgba(73, 4, 4, 0.5);
+}
+
+.btn:hover
+{
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+    box-shadow: rgb(157, 5, 5) 0px 0px 6px;
+}
