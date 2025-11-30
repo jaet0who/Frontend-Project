@@ -5,24 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Register</title>
         <link rel="stylesheet" href="customerLogin.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header></header>
         <main><div class=container>
             <form>
                 <h2>Create and Account</h2>
                 <!--Accepts text and requires feilds to be filled-->
                 <p>Username:</p>
-                <input type="text" placeholder="Username..." required>
+                <input class="input" type="text" placeholder="Username..." required>
                 <p>Email:</p>
-                <input type="email" placeholder="@email.com..." required>
+                <input class="input" type="email" placeholder="@email.com..." required>
                 <p>Password:</p>
-                <input type="password" placeholder="Atleast 8 characters..." required>
+                <input class="input" id="password" type="password" placeholder="Atleast 8 characters..." required>
                 <p>Confirm Password:</p>
-                <input type="password" placeholder="Re-enter password..." required>
-                <button type="submit" class="reg-btn" id="reg-btn">Register</button>
+                <input class="input" id="confirm-password" type="password" placeholder="Re-enter password..." required>
+                <button class="reg-btn" id="reg-btn" type="submit" id="reg-btn">Register</button>
             </form>
         </div></main>
-        <footer></footer>
+        <script src="customerLogin.js"></script>
     </body>
 </html>
