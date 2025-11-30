@@ -65,6 +65,10 @@ body {
     opacity: 1;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 .Login-btn {
     background: #ff7b48;
