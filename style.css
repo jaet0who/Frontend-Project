@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f8f2e9;
+    color: #2b2b2b;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #f7efe5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar ul li a {
+    color: #0b2c53;
+    text-decoration: none;
+    font-weight: 800;
+    position: relative;
+    padding: 8px 14px;
+    border-radius: 4px 4px 0 0;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a:hover {
+    background: #0b2c53;
+    color: white;
+}
+
+/* Bookmark triangle */
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    /* distance under the link */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    opacity: 0;
+    transition: 0.25s ease;
+}
+
+.navbar ul li a:hover::after {
+    border-top-color: #0b2c53;
+    opacity: 1;
+}
+
+
+.Login-btn {
+    background: #ff7b48;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+}
+
+.Login-btn:hover {
+    background-color: #e15c28;
+}
+
+/* HERO SECTION */
+.hero {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---- IMAGE ---- */
+.hero-img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+
+/* BOOK TYPES */
+.books {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.books h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #0b2c53;
+}
+
+.books-container {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+    white-space: nowrap;
+}
+
+.books-container::-webkit-scrollbar {
+    display: none;
+}
+
+.book {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 280px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    transition: 0.3s ease;
+}
+
+.book img {
+
+    width: 70%;
+    height: auto;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.book:hover {
+    background: #0b2c53;
+}
+
+.book:hover img {
+    transform: translateY(-10px);
+}
+
+/* Footer SECTION */
+.site-footer {
+    background-color: #0b2c53;
+    color: #f7efe5;
+    padding: 30px 60px 15px;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.footer-col {
+    min-width: 180px;
+    max-width: 250px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    margin-bottom: 10px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 6px;
+}
+
+.footer-col ul li a {
+    color: #f7efe5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-socials a {
+    color: #f7efe5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-socials a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #f7efe5;
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+}
