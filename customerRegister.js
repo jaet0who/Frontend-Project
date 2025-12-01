@@ -31,7 +31,7 @@ document.getElementById('reg-btn').addEventListener('click', function(event) {
     //email
     if(!email.checkValidity())
     {
-        email.setCustomValidity("Please enter a valid email address.");
+        email.setCustomValidity("Either username or email format is wrong.");
         isValid= false;
     }
     else
