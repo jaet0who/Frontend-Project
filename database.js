@@ -1,1 +1,1 @@
-the database for customer's account info.
+//a small database for customer's account information.
