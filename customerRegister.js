@@ -16,10 +16,11 @@ document.getElementById('reg-btn').addEventListener('click', function(event) {
 
     let isValid= true;
     //username
-    const userRegx= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$/;
+    const userCheck= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$/;
     
-    if(!userRegx.test(username.value))
+    if(!userCheck.test(username.value))
     {
+        username.setCustomValidity("Either username or password is wrong.");
         isValid= false;
     }
     else
@@ -39,8 +40,8 @@ document.getElementById('reg-btn').addEventListener('click', function(event) {
     }
 
     //password
-    const passRegex= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-    if(!passRegex.test(password.value))
+    const passCheck= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    if(!passCheck.test(password.value))
     {
         password.setCustomValidity("Password must be atleast 8 characters long and contain both letters and numbers.");
         isValid= false;
