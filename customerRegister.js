@@ -7,6 +7,8 @@
 //-> each criteria has its own error message
 //-> ince all criteria is valid, only then will the register buttom take them to the customerHome.html page
 
+//->new: registering should take us back to the login page, from the login it takes us to home. A person's info should match though
+
 document.getElementById('reg-btn').addEventListener('click', function(event) {
     event.preventDefault();
     const username= document.getElementById("user");
@@ -14,9 +16,20 @@ document.getElementById('reg-btn').addEventListener('click', function(event) {
     const password= document.getElementById("password");
     const confirmPass= document.getElementById("confirm-password");
 
-    let isValid= true;
+    let isValid;
+    
+    const userCheck;
+    const emailCheck;
+    const passCheck;
+    const confirmPassCheck;
+
+    
+
+
+    
+    
     //username
-    const userCheck= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$/;
+    /*const userCheck= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$/;
     
     if(!userCheck.test(username.value))
     {
@@ -72,6 +85,6 @@ document.getElementById('reg-btn').addEventListener('click', function(event) {
     }
 
     alert("Account created!");
-    window.location.href= "customerHome.html";
+    window.location.href= "customerLogin.html";
 
-});
+});*/
