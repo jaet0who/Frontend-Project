@@ -55,7 +55,7 @@ main
 {
     cursor: pointer;
     padding: 2%;
-    background: rgb(75, 2, 2);
+    background: #ff7b48;
     border: none;
     font-weight: bolder;
     border-radius: 12px;
@@ -69,5 +69,5 @@ main
 {
     transform: scale(1.1);
     transition: transform 0.2s ease;
-    box-shadow: rgb(157, 5, 5) 0px 0px 6px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 6px;
 }

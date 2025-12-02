@@ -18,18 +18,13 @@ document.getElementById('reg-btn').addEventListener('click', function(event) {
 
     let isValid;
     
-    const userCheck;
+    /*const userCheck;
     const emailCheck;
     const passCheck;
-    const confirmPassCheck;
-
-    
-
-
-    
-    
+    const confirmPassCheck;*/
+      
     //username
-    /*const userCheck= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$/;
+    const userCheck= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$/;
     
     if(!userCheck.test(username.value))
     {
@@ -85,6 +80,6 @@ document.getElementById('reg-btn').addEventListener('click', function(event) {
     }
 
     alert("Account created!");
-    window.location.href= "customerLogin.html";
+    window.location.href= "index.html";
 
-});*/
+});

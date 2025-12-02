@@ -17,7 +17,7 @@ body
 
 header
 {
-    height: 5%;
+    height: 6%;
     width: 100%;
     background-color: #0b2c53;
 
@@ -26,6 +26,12 @@ header
     flex-direction: row;
     padding-left: 2%;
     border-top: 3px black solid;
+}
+
+.header-btns
+{
+    display: flex;
+    flex-direction: row;
 }
 
 .header-btn
@@ -40,9 +46,8 @@ header
 
 .header-btn:hover
 {
-    text-decoration: underline;
-    border: white 1px solid;
-    transition: 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25), 0 0 6px rgba(73, 4, 4, 0.5);
+    border-radius: 10%;
 }
 
 .left, .right
@@ -73,11 +78,9 @@ main
    align-items: center;
    border-left: none;
    box-shadow: black 0px 0px 20px;
-   opacity: 0;
-   animation: fadeIn 0.8s ease-out forwards;
 }
 
-@keyframes fadeIn
+/*@keyframes slideIn
 {
     from
     {
@@ -87,24 +90,22 @@ main
     {
         opacity: 1;
     }
-}
+}*/
 
 .left
 {
    display: flex;
    flex-direction: column;
-   color: white;
-   
+   color: white;   
    padding: 10%;
    width: 70%;
    justify-content: left;
    align-items: left;
    background: rgba(0, 0, 0, 0.485);
    box-shadow: black 0px 0px 12px;
-   animation: slideIn 0.8s ease-out forwards;
 }
 
-@keyframes slideIn {
+/*@keyframes slideIn {
     0% {
         opacity: 0;
         transform: translateY(70px);
@@ -113,7 +114,7 @@ main
         opacity: 1;
         transform: translateY(0);
     }
-}
+}*/
 
 .admin-btn, .cus-btn, .explore-btn
 {
@@ -127,22 +128,8 @@ main
     margin: 3%;
     font-size: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.25), 0 0 6px rgba(73, 4, 4, 0.5);
-    animation: slideUp 0.6s ease-out forwards;
 }
 
-@keyframes slideUp
-{
-    0%
-    {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100%
-    {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 .admin-btn:hover, .cus-btn:hover, .explore-btn:hover
 {

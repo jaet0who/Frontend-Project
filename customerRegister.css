@@ -60,19 +60,25 @@ main
     padding: 4%;
     margin-top: 7%;
     width: 40%;
-    background: rgb(75, 2, 2);
+    background:  #ff7b48;
     border: none;
     font-weight: bolder;
     border-radius: 12px;
     color: white;
     font-size: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.25), 0 0 6px rgba(73, 4, 4, 0.5);
+    margin-right: 5%;
 }
 
 .reg-btn:hover
 {
     transform: scale(1.1);
     transition: transform 0.2s ease;
-    box-shadow: rgb(157, 5, 5) 0px 0px 6px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 6px;
 }
 
+.link-log
+{
+    color: rgb(255, 0, 0);
+    font-size: 12px;
+}
