@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Details - 201 Great Ideas for Your Small Business</title>
+<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<header class="header"><h2>Book Details Page</h2></header>
+<div class="page-container">
+<div class="left-side">
+<div class="book-frame">
+<div class="img-container">
+<img src="img10.jpg" alt="Book Cover" class="book-img">
+</div>
+</div>
+<div class="buttons-row">
+<button class="main-btn" id="favBtn">Add to Fav</button>
+<button class="heart-btn" id="heartBtn">&#10084;</button>
+</div>
+</div>
+<div class="right-info">
+<h1 class="book-title">201 Great Ideas for Your Small Business</h1>
+<h2 class="section-title">About the Book</h2>
+<div class="line"></div>
+<p class="text">
+A practical book full of creative ideas to help small business owners grow and succeed.
+</p>
+<h2 class="section-title">Book Information</h2>
+<div class="line"></div>
+<ul class="info-list">
+<li><strong>Title:</strong> 201 Great Ideas for Your Small Business</li>
+<li><strong>Author:</strong> David Taylor</li>
+<li><strong>Category:</strong> Business</li>
+<li><strong>Pages:</strong> 350</li>
+<li><strong>Views:</strong> 9,800</li>
+<li><strong>Borrowed by:</strong> 650 readers</li>
+<li><strong>Rating:</strong> 4.1 / 5</li>
+</ul>
+<h2 class="section-title">Readers Reviews</h2>
+<div class="line"></div>
+<div class="review"><h3>Omar</h3><p>Very helpful and full of tips!</p></div>
+<div class="review"><h3>Nada</h3><p>Great inspiration for new entrepreneurs.</p></div>
+</div>
+</div>
+<script>
+const favBtn = document.getElementById("favBtn");
+const heartBtn = document.getElementById("heartBtn");
+favBtn.addEventListener("click", () => { heartBtn.classList.toggle("active"); });
+</script>
+</body>
+</html>

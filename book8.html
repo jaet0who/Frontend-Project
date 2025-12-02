@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Details - فن اللامبالاة</title>
+<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<header class="header"><h2>Book Details Page</h2></header>
+<div class="page-container">
+<div class="left-side">
+<div class="book-frame">
+<div class="img-container">
+<img src="im8.jpg" alt="Book Cover" class="book-img">
+</div>
+</div>
+<div class="buttons-row">
+<button class="main-btn" id="favBtn">Add to Fav</button>
+<button class="heart-btn" id="heartBtn">&#10084;</button>
+</div>
+</div>
+<div class="right-info">
+<h1 class="book-title">فن اللامبالاة</h1>
+<h2 class="section-title">About the Book</h2>
+<div class="line"></div>
+<p class="text">
+A self-help book that explains how to focus on what truly matters in life and ignore unnecessary stress.
+</p>
+<h2 class="section-title">Book Information</h2>
+<div class="line"></div>
+<ul class="info-list">
+<li><strong>Title:</strong> فن اللامبالاة</li>
+<li><strong>Author:</strong> Mark Manson</li>
+<li><strong>Category:</strong> Self-Help</li>
+<li><strong>Pages:</strong> 250</li>
+<li><strong>Views:</strong> 14,000</li>
+<li><strong>Borrowed by:</strong> 980 readers</li>
+<li><strong>Rating:</strong> 4.6 / 5</li>
+</ul>
+<h2 class="section-title">Readers Reviews</h2>
+<div class="line"></div>
+<div class="review"><h3>Sara</h3><p>Changed my perspective on life!</p></div>
+<div class="review"><h3>Mohamed</h3><p>Practical and motivating advice.</p></div>
+</div>
+</div>
+<script>
+const favBtn = document.getElementById("favBtn");
+const heartBtn = document.getElementById("heartBtn");
+favBtn.addEventListener("click", () => { heartBtn.classList.toggle("active"); });
+</script>
+</body>
+</html>

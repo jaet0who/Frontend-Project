@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+
+    <!-- SIMPLE HEADER -->
+    <header class="header">
+        <h2>Book Details Page</h2>
+    </header>
+
+    <div class="page-container">
+
+        <!-- LEFT SIDE CONTAINS: FRAME + BUTTONS -->
+        <div class="left-side">
+
+            <!-- SAME FRAME FROM MAIN PAGE -->
+            <div class="book-frame">
+
+                <div class="img-container">
+                    <img src="كتاب الدحيح - ما وراء الكواليس.jpg" alt="Book Cover" class="book-img">
+                </div>
+
+            </div>
+
+            <!-- BUTTONS BELOW FRAME -->
+            <div class="buttons-row">
+
+                <button class="main-btn" id="favBtn">Add to Fav</button>
+
+                <button class="heart-btn" id="heartBtn">&#10084;</button>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE INFO -->
+        <div class="right-info">
+
+            <h1 class="book-title">كتاب الدحيح</h1>
+
+            <h2 class="section-title">About the Book</h2>
+            <div class="line"></div>
+
+            <p class="text">
+                This book presents scientific topics in a simple, fun, and smooth way.
+                It mixes knowledge with humor to explain complex ideas in an enjoyable manner.
+            </p>
+
+            <h2 class="section-title">Book Information</h2>
+            <div class="line"></div>
+
+            <ul class="info-list">
+                <li><strong>Title:</strong> الدحيح</li>
+                <li><strong>Author:</strong> Ahmed El Ghandour</li>
+                <li><strong>Category:</strong> Science Simplification</li>
+                <li><strong>Pages:</strong> 320</li>
+                <li><strong>Views:</strong> 13,450</li>
+                <li><strong>Borrowed by:</strong> 850 readers</li>
+                <li><strong>Rating:</strong> 4.7 / 5</li>
+            </ul>
+
+            <h2 class="section-title">Readers Reviews</h2>
+            <div class="line"></div>
+
+            <div class="review">
+                <h3>Mohamed</h3>
+                <p>Very enjoyable and full of useful information!</p>
+            </div>
+
+            <div class="review">
+                <h3>Sarah</h3>
+                <p>I finished it in one day! Highly recommended.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        const favBtn = document.getElementById("favBtn");
+        const heartBtn = document.getElementById("heartBtn");
+
+        favBtn.addEventListener("click", () => {
+            heartBtn.classList.toggle("active");
+        });
+    </script>
+
+</body>
+</html>
+
+
