@@ -40,29 +40,8 @@ body {
 
 .navbar ul li a:hover {
     background: #0b2c53;
+    border-radius: 20px;
     color: white;
-}
-
-/* Bookmark triangle */
-.navbar ul li a::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    /* distance under the link */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid transparent;
-    opacity: 0;
-    transition: 0.25s ease;
-}
-
-.navbar ul li a:hover::after {
-    border-top-color: #0b2c53;
-    opacity: 1;
 }
 
 a {
