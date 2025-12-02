@@ -15,6 +15,11 @@ body
     background-size: cover;
 }
 
+main
+{
+    padding-top: 15%;
+}
+
 .container
 {
     background-color:  rgba(0, 0, 0, 0.734);
@@ -27,8 +32,6 @@ body
     font-family: poppins, sans-serif;
     box-shadow: black 0px 0px 20px;    
     border-radius: 10px;
-    margin-top: 10%;
-    margin-bottom: 30%;
     margin-right: 10%;
     margin-left: 10%;
 }
@@ -52,7 +55,7 @@ body
 {
     cursor: pointer;
     padding: 2%;
-    background: rgb(75, 2, 2);
+    background: #ff7b48;
     border: none;
     font-weight: bolder;
     border-radius: 12px;
@@ -66,5 +69,5 @@ body
 {
     transform: scale(1.1);
     transition: transform 0.2s ease;
-    box-shadow: rgb(157, 5, 5) 0px 0px 6px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 6px;
 }
