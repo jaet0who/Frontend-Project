@@ -12,6 +12,7 @@ body
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -20,12 +21,26 @@ header
     height: 6%;
     width: 100%;
     background-color: #0b2c53;
-
     color: white;
     display: flex;
     flex-direction: row;
-    padding-left: 2%;
+    justify-content: space-between;
+    align-items: center;
+    
     border-top: 3px black solid;
+}
+
+.logo video
+{
+    border-radius: 50px
+}
+
+.logo
+{
+   display: flex;
+   height: 100%;
+    
+
 }
 
 .header-btns
@@ -140,7 +155,81 @@ main
 
 }
 
-footer
+.site-footer {
+    background-color: #0b2c53;
+    color: #f7efe5;
+    padding: 30px 60px 15px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.footer-col {
+    min-width: 180px;
+    max-width: 250px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    margin-bottom: 10px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 6px;
+}
+
+.footer-col ul li a {
+    color: #f7efe5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-socials a {
+    color: #f7efe5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-socials a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #f7efe5;
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+/*footer
 {
     padding: 3%;
     background-color: #0b2c53;
@@ -150,9 +239,9 @@ footer
     border-left: 3px black solid;
     border-right: 3px black solid;
 
-}
+}*/
 
-.footer-left
+/*.footer-left
 {
    margin-left: 40%;
 }
@@ -160,4 +249,5 @@ footer
 .footer-right
 {
     margin-left: 10%
-}
+}*/
+
