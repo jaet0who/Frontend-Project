@@ -1,22 +1,24 @@
-//login should directly take us to the customer home page.
+//page will not redirect to home unless credentials are inputted.
+//custom error message in case of empty fields, even if only one is empty.
 
-document.getElementById("log-btn");
 const user= document.getElementById("user");
 const pass= document.getElementById("pass");
 
-function checkValidity(user, pass)
-{
-    
-}
+document.getElementById("log-btn").addEventListener("click", function(event) {
+    event.preventDefault();
 
-
-
-function checkUserandPass(user, pass) //user can only enter the homepage if both user and pass are entered and valid.
-{
-    if(user=="" && pass=="")
+    if(user.value==="" && pass.value==="")
     {
-        
+        alert("Empty fields. Enter credentials.");
+        document.getElementById("customerLogin.html").reset();
     }
-}
-
-
+    else if(user.valaue==="" || pass.value==="")
+    {
+        alert("Enter missing credentials.");
+        document.getElementById("customerLogin.html").reset();
+    }
+    else
+    {
+        window.location.href= "index.html";
+    }
+});
