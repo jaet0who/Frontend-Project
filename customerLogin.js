@@ -6,7 +6,7 @@ const pass= document.getElementById("pass");
 
 function checkValidity(user, pass)
 {
-
+    
 }
 
 

@@ -155,21 +155,42 @@
 
   <!-- ======= JavaScript ======= -->
   <script>
+    // ===== Search Function =====
     const input = document.getElementById('searchInput');
     const searchBtn = document.getElementById('searchBtn');
+    const bookItems = document.querySelectorAll('.book-item');
 
-    // ===== Search Function =====
+    // ===== Search Button Click =====
     searchBtn.addEventListener('click', () => {
-      const val = input.value.trim();
+      const val = input.value.trim().toLowerCase();
+
+      // If button is "Back", show all books
+      if(searchBtn.innerText === "Back") {
+        bookItems.forEach(b => b.style.display = "flex");
+        searchBtn.innerText = "Search";
+        input.value = "";
+        return;
+      }
+
       if(!val) return;
 
-      const books = document.querySelectorAll('.book-frame img');
-      const target = Array.from(books).find(b => b.alt.toLowerCase() === val.toLowerCase());
+      let target = null;
+      bookItems.forEach(book => {
+        const img = book.querySelector("img");
+        if(img.alt.toLowerCase() === val) target = book;
+      });
 
-      if(target){
-        target.scrollIntoView({ behavior: "smooth", block: "center" });
-        target.classList.add('hoverEffectTemp');
-        setTimeout(() => target.classList.remove('hoverEffectTemp'), 800);
+      if(target) {
+        // Hide all books
+        bookItems.forEach(b => b.style.display = "none");
+        // Show the found book only
+        target.style.display = "flex";
+
+        // Scroll to the book
+        target.scrollIntoView({behavior:"smooth", block:"center"});
+
+        // Button changes to Back
+        searchBtn.innerText = "Back";
       }
     });
 
