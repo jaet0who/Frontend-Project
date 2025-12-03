@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("Login status:", isLoggedIn);
 
+    
+    //The problem is probably here. Makes the button redirect to the home page without waiting for the ID
     if (isLoggedIn === "true") {
         loginBtn.textContent = "Logout";
         loginBtn.onclick = function () {
