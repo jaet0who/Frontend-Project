@@ -1,0 +1,257 @@
+/* General */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7efe5;
+}
+
+
+/* Main */
+.main {
+  flex: 1;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #f7efe5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  color: #0b2c53;
+  text-decoration: none;
+  font-weight: 800;
+  position: relative;
+  padding: 8px 14px;
+  border-radius: 4px 4px 0 0;
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar ul li a:hover {
+  background: #0b2c53;
+  border-radius: 15px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+#Login-btn {
+  background: #ff7b48;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+}
+
+.Login-btn:hover {
+  background-color: #e15c28;
+}
+
+/* Top bar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+/* BOOKS Header مع زرار Add Book */
+.books-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+#adminControls {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 10px;
+}
+
+.books-header h2 {
+  margin: 0;
+  font-size: xx-large;
+  font-weight: bold;
+  margin-top: 50px;
+  color: #0b2c53;
+}
+
+#adminControls button {
+  font-size: large;
+  padding: 10px 30px;
+  border: none;
+  margin-left: 50px;
+  background: #e79557;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  transform: translateY(40px);
+}
+
+
+#adminControls button:hover {
+  background: #e06d3f;
+}
+
+/* Row of Books */
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Book Card */
+.book {
+  width: 250px;
+  background: #0b2c53;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* Hover effect: الكارد يطلع لفوق */
+.book:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.book img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0px 4px 10px rgba(253, 251, 251, 0.18);
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #f3ece8;
+}
+
+.Price {
+  font-size: medium;
+  color: #f3ece8;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Buttons inside each card */
+.book-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.edit-btn {
+  background: #ff7b48;
+  border: 0;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #f3ece8;
+}
+
+.edit-btn:hover {
+  background: #e79557;
+}
+
+.eye-btn {
+  font-size: 25px;
+  cursor: pointer;
+  color: #f3ece8;
+}
+
+.delete-btn {
+  background: #ff7b48;
+  border: 0;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #e79557;
+}
+
+/* edit price */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  /* مخفي افتراضي */
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background: #f7efe5;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0px 4px 10px #0b2c53;
+  color: #0b2c53;
+}
+
+.popup-box input {
+  background-color: #f7efe5;
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 2px solid #0b2c53;
+  color: #0b2c53;
+}
+
+.popup-box button {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #ff7b48;
+  color: #fff;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.popup-box button:hover {
+  background: #e79557;
+  transform: translateY(-2px);
+}

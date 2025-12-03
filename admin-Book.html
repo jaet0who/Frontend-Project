@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Library</title>
+    <link rel="stylesheet" href="Book1.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="logo"><video src="books (1).mp4" width="50px" autoplay muted loop></video></div>
+            <ul>
+                <li id="home-link"> <img src="home.png" alt="" width="20px"><a href="index.html">Home</a></li>
+                <li id="books-link"><img src="open-book.png" alt="" width="20px"><a onclick="goToBooks()">Books</a></li>
+                <li id="cart-link"><img src="shopping-cart.png" alt="" width="20px"><a href="#">Cart</a></li>
+                <li id="feedback-link"><img src="feedback.png" alt="" width="20px"><a href="Feedback.html">Feedback</a>
+                </li>
+            </ul>
+            <a id="Login-btn">Login</a>
+        </nav>
+
+        <!-- Main -->
+        <main class="main">
+
+            <!-- Topbar مع BOOKS و Add Book -->
+            <div class="topbar books-header">
+                <h2>BOOKS</h2>
+
+                <div id="adminControls">
+                    <button id="addBookBtn">Add New Book</button>
+                </div>
+            </div>
+
+            <!-- BOOKS -->
+            <section class="shelf coming-soon">
+                <div class="row">
+
+                    <div class="book">
+                        <img src="BOOK_1.jpg">
+                        <div class="name">Harry Potter</div>
+                        <div class="Price">$450</div>
+
+                        <div class="book-buttons">
+                            <button class="edit-btn">Edit</button>
+                            <span class="eye-btn">👁</span>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="book">
+                        <img src="BOOK2.jpg">
+                        <div class="name">Surrounded by Idiots</div>
+                        <div class="Price">$300</div>
+
+                        <div class="book-buttons">
+                            <button class="edit-btn">Edit</button>
+                            <span class="eye-btn">👁</span>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="book">
+                        <img src="book3.jpg">
+                        <div class="name">Atomic Habits</div>
+                        <div class="Price">$170</div>
+
+                        <div class="book-buttons">
+                            <button class="edit-btn">Edit</button>
+                            <span class="eye-btn">👁</span>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="book">
+                        <img src="book4.jpg">
+                        <div class="name">الدحيح </div>
+                        <div class="Price">$200</div>
+
+                        <div class="book-buttons">
+                            <button class="edit-btn">Edit</button>
+                            <span class="eye-btn">👁</span>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="book">
+                        <img src="book5.jpg">
+                        <div class="name">فن اللامبلاة</div>
+                        <div class="Price">$170</div>
+
+                        <div class="book-buttons">
+                            <button class="edit-btn">Edit</button>
+                            <span class="eye-btn">👁</span>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+
+                    <div class="book">
+                        <img src="book6.jpg">
+                        <div class="name"> نظرية الفستق</div>
+                        <div class="Price">$170</div>
+
+                        <div class="book-buttons">
+                            <button class="edit-btn">Edit</button>
+                            <span class="eye-btn">👁</span>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+
+                    <div class="book">
+                        <img src="book7.jpg">
+                        <div class="name"> Who moved My sheese </div>
+                        <div class="Price">$170</div>
+
+                        <div class="book-buttons">
+                            <button class="edit-btn">Edit</button>
+                            <span class="eye-btn">👁</span>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="book">
+                        <img src="peterPan.jpg">
+                        <div class="name"> Peter Pan </div>
+                        <div class="Price">$180</div>
+
+                        <div class="book-buttons">
+                            <button class="edit-btn">Edit</button>
+                            <span class="eye-btn">👁</span>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="book">
+                        <img src="img11.webp">
+                        <div class="name"> عزيزي المستبد </div>
+                        <div class="Price">$190</div>
+
+                        <div class="book-buttons">
+                            <button class="edit-btn">Edit</button>
+                            <span class="eye-btn">👁</span>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="book">
+                        <img src="img10.jpg">
+                        <div class="name"> 201 Great Ideas for Your Small Business </div>
+                        <div class="Price">$250</div>
+
+                        <div class="book-buttons">
+                            <button class="edit-btn">Edit</button>
+                            <span class="eye-btn">👁</span>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="book">
+                        <img src="im9.jpg">
+                        <div class="name"> Your Next Five Moves </div>
+                        <div class="Price">$250</div>
+
+                        <div class="book-buttons">
+                            <button class="edit-btn">Edit</button>
+                            <span class="eye-btn">👁</span>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Edit Book Popup -->
+        <div id="bookPopup" class="popup">
+            <div class="popup-box">
+                <h3 id="popupTitle">Edit Book</h3>
+                <input type="text" id="bookName" placeholder="Book Name">
+                <input type="text" id="bookPrice" placeholder="Enter Price">
+                <input type="text" id="bookImg" placeholder="Image URL">
+                <div>
+                    <button id="saveBtn">Save</button>
+                    <button id="cancelBtn">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="allbooks.js"></script>
+    <script src="admin-Book.js"></script>
+    <script src="auth.js"></script>
+
+</body>
+
+</html>
