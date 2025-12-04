@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Library</title>
   <link rel="stylesheet" href="Offer.css">
 </head>
+
 <body>
 
-  <!-- ======= Search Bar ======= -->
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo"><video src="books (1).mp4" width="50px" autoplay muted loop></video></div>
+    <ul>
+      <li id="home-link"> <img src="home.png" alt="" width="20px"><a href="index.html">Home</a></li>
+      <li id="books-link"><img src="open-book.png" alt="" width="20px"><a onclick="goToBooks()">Books</a></li>
+      <li id="cart-link"><img src="shopping-cart.png" alt="" width="20px"><a href="cart.html">Cart</a></li>
+      <li id="feedback-link"><img src="feedback.png" alt="" width="20px"><a href="Feedback.html">Feedback</a></li>
+    </ul>
+    <a id="Login-btn">Login</a>
+  </nav>
+
+  <!-- SEARCH -->
   <div class="search-bar">
     <input list="Search" name="Search" placeholder="Search for books..." id="searchInput">
     <datalist id="Search">
@@ -27,251 +41,143 @@
     <button id="searchBtn">Search</button>
   </div>
 
-  <!-- ======= Books Section ======= -->
-  <div class="books-section">
+  <!-- BOOKS -->
+  <div class="books-section" id="booksContainer"></div>
 
-    <!-- Book 1 -->
-    <div class="book-item">
-      <div class="book-frame">
-        <img id="im1" src="كتاب الدحيح - ما وراء الكواليس.jpg" alt="الدحيح">
-      </div>
-      <div class="book-buttons">
-        <button class="buy-btn" data-price="200" data-page="buy1.html">Buy</button>
-        <button class="borrow-btn">Borrow</button>
-      </div>
-    </div>
-
-    <!-- Book 2 -->
-    <div class="book-item">
-      <div class="book-frame">
-        <img id="im2" src="im2.jpg" alt="Atomic Habits">
-      </div>
-      <div class="book-buttons">
-        <button class="buy-btn" data-price="170" data-page="buy2.html">Buy</button>
-        <button class="borrow-btn">Borrow</button>
-      </div>
-    </div>
-
-    <!-- Book 3 -->
-    <div class="book-item">
-      <div class="book-frame">
-        <img id="im3" src="im3.jpg" alt="Surrounded by idiots">
-      </div>
-      <div class="book-buttons">
-        <button class="buy-btn" data-price="300" data-page="buy3.html">Buy</button>
-        <button class="borrow-btn">Borrow</button>
-      </div>
-    </div>
-
-    <!-- Book 4 -->
-    <div class="book-item">
-      <div class="book-frame">
-        <img id="im4" src="im4.jpg" alt="Harry Potter">
-      </div>
-      <div class="book-buttons">
-        <button class="buy-btn" data-price="450" data-page="buy4.html">Buy</button>
-        <button class="borrow-btn">Borrow</button>
-      </div>
-    </div>
-
-    <!-- Book 5 -->
-    <div class="book-item">
-      <div class="book-frame">
-        <img id="im5" src="im5.jpg" alt="Peter Pan & Wendy">
-      </div>
-      <div class="book-buttons">
-        <button class="buy-btn" data-price="180" data-page="buy5.html">Buy</button>
-        <button class="borrow-btn">Borrow</button>
-      </div>
-    </div>
-
-    <!-- Book 6 -->
-    <div class="book-item">
-      <div class="book-frame">
-        <img id="im6" src="im6.jpg" alt="Who Moved My Cheese">
-      </div>
-      <div class="book-buttons">
-        <button class="buy-btn" data-price="170" data-page="buy6.html">Buy</button>
-        <button class="borrow-btn">Borrow</button>
-      </div>
-    </div>
-
-    <!-- Book 7 -->
-    <div class="book-item">
-      <div class="book-frame">
-        <img id="im7" src="im7.jpg" alt="نظرية الفستق">
-      </div>
-      <div class="book-buttons">
-        <button class="buy-btn" data-price="170" data-page="buy7.html">Buy</button>
-        <button class="borrow-btn">Borrow</button>
-      </div>
-    </div>
-
-    <!-- Book 8 -->
-    <div class="book-item">
-      <div class="book-frame">
-        <img id="im8" src="im8.jpg" alt="فن اللامبالاة">
-      </div>
-      <div class="book-buttons">
-        <button class="buy-btn" data-price="170" data-page="buy8.html">Buy</button>
-        <button class="borrow-btn">Borrow</button>
-      </div>
-    </div>
-
-    <!-- Book 9 -->
-    <div class="book-item">
-      <div class="book-frame">
-        <img id="im9" src="im9.jpg" alt="Your Next Five Moves">
-      </div>
-      <div class="book-buttons">
-        <button class="buy-btn" data-price="180" data-page="buy9.html">Buy</button>
-        <button class="borrow-btn">Borrow</button>
-      </div>
-    </div>
-
-    <!-- Book 10 -->
-    <div class="book-item">
-      <div class="book-frame">
-        <img id="im10" src="img10.jpg" alt="201 Great Ideas for your small business">
-      </div>
-      <div class="book-buttons">
-        <button class="buy-btn" data-price="200" data-page="buy10.html">Buy</button>
-        <button class="borrow-btn">Borrow</button>
-      </div>
-    </div>
-
-    <!-- Book 11 -->
-    <div class="book-item">
-      <div class="book-frame">
-        <img id="im11" src="img11.webp" alt="عزيزي المستبد">
-      </div>
-      <div class="book-buttons">
-        <button class="buy-btn" data-price="190" data-page="buy11.html">Buy</button>
-        <button class="borrow-btn">Borrow</button>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ======= JavaScript ======= -->
   <script>
-    // ===== Search Function =====
-    const input = document.getElementById('searchInput');
-    const searchBtn = document.getElementById('searchBtn');
-    const bookItems = document.querySelectorAll('.book-item');
+    document.addEventListener("DOMContentLoaded", () => {
 
-    // ===== Search Button Click =====
-    searchBtn.addEventListener('click', () => {
-      const val = input.value.trim().toLowerCase();
+      let books = JSON.parse(localStorage.getItem("books")) || [];
 
-      // If button is "Back", show all books
-      if(searchBtn.innerText === "Back") {
-        bookItems.forEach(b => b.style.display = "flex");
-        searchBtn.innerText = "Search";
-        input.value = "";
-        return;
-      }
+      const container = document.getElementById("booksContainer");
+      const input = document.getElementById("searchInput");
+      const searchBtn = document.getElementById("searchBtn");
 
-      if(!val) return;
+      container.innerHTML = "";
 
-      let target = null;
-      bookItems.forEach(book => {
-        const img = book.querySelector("img");
-        if(img.alt.toLowerCase() === val) target = book;
+      // ===== Render Books =====
+      books.forEach((book, index) => {
+
+        const div = document.createElement("div");
+        div.className = "book-item";
+
+        div.innerHTML = `
+          <div class="book-frame">
+              <img src="${book.img}" alt="${book.name}">
+          </div>
+
+          <div class="book-buttons">
+              <button class="buy-btn" ${book.hidden ? "disabled" : ""} 
+                      data-price="${book.price}" 
+                      data-index="${index}">
+                ${book.hidden ? "Unavailable" : "Buy"}
+              </button>
+
+              <button class="borrow-btn" ${book.hidden ? "disabled" : ""} data-index="${index}">
+                Borrow
+              </button>
+          </div>
+        `;
+
+        if (book.hidden) {
+          div.style.opacity = "0.4";
+          div.classList.add("unavailable");
+        }
+
+        container.appendChild(div);
       });
 
-      if(target) {
-        // Hide all books
-        bookItems.forEach(b => b.style.display = "none");
-        // Show the found book only
-        target.style.display = "flex";
+      const bookItems = document.querySelectorAll('.book-item');
 
-        // Scroll to the book
-        target.scrollIntoView({behavior:"smooth", block:"center"});
+      // ===== SEARCH =====
+      searchBtn.addEventListener('click', () => {
+        const val = input.value.trim().toLowerCase();
 
-        // Button changes to Back
-        searchBtn.innerText = "Back";
-      }
-    });
+        if (searchBtn.innerText === "Back") {
+          bookItems.forEach(b => b.style.display = "flex");
+          searchBtn.innerText = "Search";
+          input.value = "";
+          return;
+        }
 
-    // ===== Buy Buttons =====
-    const buyButtons = document.querySelectorAll('.buy-btn');
-    buyButtons.forEach(btn => {
-      const price = btn.dataset.price + " EGP";
-      btn.addEventListener('mouseenter', () => btn.textContent = price);
-      btn.addEventListener('mouseleave', () => btn.textContent = "Buy");
-      btn.addEventListener('click', () => window.location.href = btn.dataset.page);
-    });
+        if (!val) return;
 
-    // ===== Borrow Buttons =====
-    const borrowButtons = document.querySelectorAll('.borrow-btn');
-    borrowButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.textContent = "Borrowed";
-        btn.disabled = true;
+        let target = null;
+        bookItems.forEach(book => {
+          const img = book.querySelector("img");
+          if (img.alt.toLowerCase() === val) {
+            target = book;
+          }
+        });
+
+        if (target) {
+          bookItems.forEach(b => b.style.display = "none");
+          target.style.display = "flex";
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+          searchBtn.innerText = "Back";
+        }
       });
+
+      // ===== BUY BUTTON =====
+      document.querySelectorAll('.buy-btn').forEach(btn => {
+        if (!btn.disabled) {
+
+          // Hover show price
+          btn.addEventListener('mouseenter', () => {
+            btn.textContent = btn.dataset.price + " EGP";
+          });
+
+          btn.addEventListener('mouseleave', () => {
+            btn.textContent = "Buy";
+          });
+
+          // CLICK add to cart
+          btn.addEventListener("click", () => {
+            const index = btn.dataset.index;
+            addToCart(books[index], "buy");
+          });
+        }
+      });
+
+      // ===== BORROW BUTTON =====
+      document.querySelectorAll('.borrow-btn').forEach(btn => {
+        if (!btn.disabled) {
+          btn.addEventListener("click", () => {
+            const index = btn.dataset.index;
+            addToCart(books[index], "borrow");
+            btn.textContent = "Borrowed";
+            btn.disabled = true;
+          });
+        }
+      });
+
+      // ===== OPEN BOOK DETAILS WHEN CLICK IMAGE =====
+      document.querySelectorAll('.book-frame img').forEach((img, index) => {
+        img.addEventListener("click", () => {
+          window.location.href = `book${index + 1}.html`;
+        });
+      });
+
     });
 
-    // ===== Click on Image for Details =====
-    document.getElementById("im1").addEventListener("click", () => {
-      window.location.href = "book.html"; // صفحة تفاصيل كتاب الدحيح
-    });
-    
-  document.getElementById("im2").addEventListener("click", () => {
-    window.location.href = "book2.html"; // صفحة تفاصيل Atomic Habits
-  });
+    // ====== ADD TO CART FUNCTION ======
+    function addToCart(book, type) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  document.getElementById("im3").addEventListener("click", () => {
-    window.location.href = "book3.html"; // صفحة تفاصيل Surrounded by idiots
-  });
+      cart.push({
+        name: book.name,
+        img: book.img,
+        price: book.price,
+        type: type
+      });
 
-  document.getElementById("im4").addEventListener("click", () => {
-    window.location.href = "book4.html"; // صفحة تفاصيل Harry Potter
-  });
-
-  document.getElementById("im5").addEventListener("click", () => {
-    window.location.href = "book5.html"; // صفحة تفاصيل Peter Pan & Wendy
-  });
-
-  document.getElementById("im6").addEventListener("click", () => {
-    window.location.href = "book6.html"; // صفحة تفاصيل Who Moved My Cheese
-  });
-
-  document.getElementById("im7").addEventListener("click", () => {
-    window.location.href = "book7.html"; // صفحة تفاصيل نظرية الفستق
-  });
-
-  document.getElementById("im8").addEventListener("click", () => {
-    window.location.href = "book8.html"; // صفحة تفاصيل فن اللامبالاة
-  });
-
-  document.getElementById("im9").addEventListener("click", () => {
-    window.location.href = "book9.html"; // صفحة تفاصيل Your Next Five Moves
-  });
-
-  document.getElementById("im10").addEventListener("click", () => {
-    window.location.href = "book10.html"; // صفحة تفاصيل 201 Great Ideas
-  });
-
-  document.getElementById("im11").addEventListener("click", () => {
-    window.location.href = "book11.html"; // صفحة تفاصيل عزيزي المستبد
-  });
-
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${book.name} added to cart ✔`);
+    }
   </script>
 
+  <script src="auth.js"></script>
+
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
