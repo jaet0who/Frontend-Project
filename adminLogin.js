@@ -1,31 +1,30 @@
 //given only 5 ids to work with valid-btn, if none of the ids are valid, return error and make them redo it
 //admin will NOT enter unless the credentials are inputted and they match the list given.
-const adminIDs= ["1001", "1002", "1003", "1004", "1005"];
 
-document.getElementById("valid-btn").addEventListener("click", function(event) 
-{
-    event.preventDefault();
-    const adminIDs= ["1001", "1002", "1003", "1004", "1005"];
-    const  givenID= document.getElementById("admin-id").value();
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("log-btn").addEventListener("click", function(event) {
+        event.preventDefault();
 
-    if(givenID==="")
-    {
-        alert("Empty field. ID required.");
-        document.getElementById("adminLogin.html").reset();
-    }
-    else if(givenID !== adminIDs)
-    {
-        alert("Invalid ID. Unauthorised access.");
-        document.getElementById("adminLogin.html").reset();
-    }
-    else
-    {
-        while(givenID===adminIDS)
+        const adminIDs = ["1001", "1002", "1003", "1004", "1005"];
+        const givenID = document.getElementById("admin-id").value.trim();
+
+        if (givenID === "") 
         {
-            window.location.href= "admin-Book.html";
+            alert("Empty field. ID required.");
+            document.getElementById("adminLogin").reset();
+        } 
+        else if (!adminIDs.includes(givenID)) 
+        {
+            alert("Invalid ID. Unauthorized access.");
+            document.getElementById("adminLogin").reset();
+        } 
+        else 
+        {
+            window.location.href = "admin-Book.html";
         }
-    }
+    });
 });
+
 
 
 

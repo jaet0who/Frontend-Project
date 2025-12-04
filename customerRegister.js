@@ -1,15 +1,139 @@
-//check username-> must have numbers and letters, minimum is 5 characters
-//check email-> must be of a valid format
-// password-> minimum 8 characters, must include letters and numbers.
-//confirm-> must match password
+// no empty field should be left behind, else user cannot register.
+//username must be alphanumeric, no longer than 5 and no smaller.
+//same thing with password, but at least 8 letters long, it must match with confirm.
+//email must have correct format.
+//goes in sequence, no prioritisation. If one field is empty an error shows up on that field, no other.
+document.getElementById('reg-btn').addEventListener('click', function(event) 
+{
+    event.preventDefault();
+    const user= document.getElementById("user");
+    const email= document.getElementById("email");
+    const pass= document.getElementById("password");
+    const confirmPass= document.getElementById("confPass");
 
-//->user cannot log into customerHome.html unless all criteris is met
-//-> each criteria has its own error message
-//-> ince all criteria is valid, only then will the register buttom take them to the customerHome.html page
+    let validity= true;
 
-//->new: registering should take us back to the login page, from the login it takes us to home. A person's info should match though
+    //user
+    const userCheck= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$/;
+    if(user.value==="")
+    {
+        user.setCustomValidity("This field cannot be empty.");
+        validity= false;
+    }
+    while(user.value!=="")
+    {
+        if(!userCheck.test(user.value))
+        {
+            user.setCustomValidity("Must be alphanumeric and of 5 characters.");
+            validity= false;
+            break;
+        }
+        else
+        {
+            user.setCustomValidity("");
+            break;
+        }
+    }
 
-document.getElementById('reg-btn').addEventListener('click', function(event) {
+    //email
+    const emailCheck= /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(email.value==="")
+    {
+        email.setCustomValidity("This field cannot be empty.");
+        validity= false;
+    }
+    while(email.value!=="")
+    {
+        if(!emailCheck.test(email.value))
+        {
+            email.setCustomValidity("Invalid format.");
+            validity= false;
+            break;
+        }
+        else
+        {
+            email.setCustomValidity("");
+            break;
+        }
+    }
+
+    //password
+    const passCheck= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    if(pass.value==="")
+    {
+        pass.setCustomValidity("This field cannot be empty.");
+        validity= false;
+    }
+    while(pass.value!=="")
+    {
+        if(!passCheck.test(pass.value))
+        {
+            pass.setCustomValidity("Must be alphanumeric and atleast 8 characters long.");
+            validity= false;
+            break;
+        }
+        else
+        {
+            pass.setCustomValidity("");
+            break;
+        }
+    }
+
+    //confirmation
+    if(confirmPass.value==="")
+    {
+        confirmPass.setCustomValidity("This field cannot be empty.");
+        validity=false;
+    }
+    while(confirmPass.value!=="")
+    {
+        if(confirmPass.value !== pass.value)
+        {
+            confirmPass.setCustomValidity("Passwords do not match.");
+            validity= false;
+            break;
+        }
+        else
+        {
+            confirmPass.setCustomValidity("");
+            break;
+        }
+    }
+
+    if(!validity)
+    {
+        user.reportValidity();
+        email.reportValidity();
+        pass.reportValidity();
+        confirmPass.reportValidity();
+        return;
+    }
+
+    if(validity)
+    {
+        window.location.href= "customerLogin.html";
+    }
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*document.getElementById('reg-btn').addEventListener('click', function(event) {
     event.preventDefault();
     const username= document.getElementById("user");
     const email= document.getElementById("email");
@@ -24,7 +148,7 @@ document.getElementById('reg-btn').addEventListener('click', function(event) {
     const confirmPassCheck;*/
       
     //username
-    const userCheck= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$/;
+   /* const userCheck= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$/;
     
     if(!userCheck.test(username.value))
     {
@@ -82,4 +206,4 @@ document.getElementById('reg-btn').addEventListener('click', function(event) {
     alert("Account created!");
     window.location.href= "index.html";
 
-});
+});*/

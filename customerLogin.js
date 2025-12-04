@@ -10,12 +10,12 @@ document.getElementById("log-btn").addEventListener("click", function(event) {
     if(user.value==="" && pass.value==="")
     {
         alert("Empty fields. Enter credentials.");
-        document.getElementById("customerLogin.html").reset();
+        document.getElementById("cus-login").reset();
     }
-    else if(user.valaue==="" || pass.value==="")
+    else if(user.value==="" || pass.value==="")
     {
         alert("Enter missing credentials.");
-        document.getElementById("customerLogin.html").reset();
+        document.getElementById("cus-login").reset();
     }
     else
     {
