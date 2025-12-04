@@ -1,12 +1,14 @@
 body {
-    background: #f2e5d5; /* beige like books page */
+    background: #f7efe5;
+    ;
+    /* beige like books page */
     margin: 0;
     font-family: "Poppins", sans-serif;
 }
 
 /* HEADER */
 .header {
-    background: #6d4b33;
+    background: #09305d;
     color: white;
     padding: 15px 25px;
     font-size: 22px;
@@ -28,9 +30,9 @@ body {
 .book-frame {
     width: 300px;
     padding: 20px;
-    background: #6d4b33;
+    background: #09305d;
     border-radius: 22px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 /* IMAGE WITH HOVER SCALE */
@@ -71,7 +73,8 @@ body {
 }
 
 .main-btn:hover {
-    background: black;
+    background: #ff7b48;
+    ;
     color: white;
 }
 
@@ -130,7 +133,5 @@ body {
     padding: 15px 20px;
     border-radius: 15px;
     margin-bottom: 15px;
-    border-left: 5px solid #6d4b33;
+    border-left: 5px solid #09305d;
 }
-
-

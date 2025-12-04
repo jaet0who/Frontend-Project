@@ -5,11 +5,65 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   font-family: Arial, sans-serif;
-  background-color: #f5e9d4;
+  background-color: #f7efe5;
 }
+
+/* NAVBAR */
+.navbar {
+  background-color: #f7efe5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  color: #0b2c53;
+  text-decoration: none;
+  font-weight: 800;
+  position: relative;
+  padding: 8px 14px;
+  border-radius: 4px 4px 0 0;
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar ul li a:hover {
+  background: #0b2c53;
+  border-radius: 15px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+#Login-btn {
+  background: #ff7b48;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+}
+
+.Login-btn:hover {
+  background-color: #e15c28;
+}
+
 
 /* ===== Search Bar ===== */
 .search-bar {
@@ -17,8 +71,9 @@ html, body {
   display: flex;
   justify-content: center;
   padding: 20px 0;
-  background-color: #f5e9d4;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #f7efe5;
+  ;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .search-bar input[list] {
@@ -34,10 +89,10 @@ html, body {
 .search-bar button {
   padding: 12px 20px;
   font-size: 16px;
-  border: 2px solid #2c180f;
+  border: 2px solid #e15c28;
   border-left: none;
   border-radius: 0 25px 25px 0;
-  background-color: #2c180f;
+  background-color: #e15c28;
   color: white;
   cursor: pointer;
   font-weight: bold;
@@ -45,7 +100,7 @@ html, body {
 }
 
 .search-bar button:hover {
-  background-color: #4b2a1f;
+  background-color: #722507;
 }
 
 /* ===== Books Section ===== */
@@ -64,11 +119,12 @@ html, body {
   align-items: center;
 }
 
+
 /* Book frame */
 .book-frame {
   width: 220px;
-  background-color: #6d4c41;
-  border: inset #5a3828 5px;
+  background-color: #0b2c53;
+  border: inset=#0b2c53 5px;
   border-radius: 15px;
   padding: 10px;
   text-align: center;
@@ -88,7 +144,7 @@ html, body {
 /* ===== Hover Effect: Zoom + Shadow ===== */
 .book-frame img:hover {
   transform: scale(1.08);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* Buttons under each book */
@@ -103,8 +159,9 @@ html, body {
 .book-buttons button {
   flex: 1;
   padding: 10px 0;
-  background-color: #6d4c41;
-  border: inset #5a3828 3px;
+  background-color: #e15c28;
+
+  border: inset #e15c28 3px;
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -113,13 +170,23 @@ html, body {
 }
 
 .book-buttons button:hover {
-  background-color: #8d6e63;
+  background-color: #722507;
   transform: translateY(-2px);
 }
 
 /* Responsive */
 @media screen and (max-width: 600px) {
-  .search-bar input[list] { width: 70%; }
-  .book-buttons { flex-direction: column; gap: 10px; width: 220px; }
-  .book-buttons button { width: 100%; }
+  .search-bar input[list] {
+    width: 70%;
+  }
+
+  .book-buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: 220px;
+  }
+
+  .book-buttons button {
+    width: 100%;
+  }
 }

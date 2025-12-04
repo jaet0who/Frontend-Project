@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="Offer.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo"><video src="books (1).mp4" width="50px" autoplay muted loop></video></div>
+        <ul>
+            <li id="home-link"> <img src="home.png" alt="" width="20px"><a href="index.html">Home</a></li>
+            <li id="books-link"><img src="open-book.png" alt="" width="20px"><a onclick="goToBooks()">Books</a></li>
+            <li id="cart-link"><img src="shopping-cart.png" alt="" width="20px"><a href="cart.html">Cart</a></li>
+            <li id="feedback-link"><img src="feedback.png" alt="" width="20px"><a href="Feedback.html">Feedback</a></li>
+        </ul>
+        <a id="Login-btn">Login</a>
+    </nav>
+
+    <h1>Your Cart 🛒</h1>
+
+    <div id="cartContainer"></div>
+
+    <div id="total"></div>
+    <button id="checkoutBtn">Checkout</button>
+    <p id="emptyMessage" class="empty-msg"></p>
+
+    <div id="paymentModal" class="payment-modal">
+        <div class="payment-content">
+
+            <!-- PAGE 1: PAYMENT OPTIONS -->
+            <div id="paymentOptions">
+                <h2>Select Payment Method</h2>
+
+                <button class="payment-btn" onclick="selectWallet()">Wallet</button>
+                <button class="payment-btn" onclick="selectCard()">Card</button>
+                <button class="payment-btn" onclick="selectCash()">Cash</button>
+
+                <button class="cancel-btn" id="closeModal">Cancel</button>
+            </div>
+
+            <!-- PAGE 2: CARD FORM -->
+            <div id="cardForm" style="display:none;">
+                <h2>Card Payment</h2>
+
+                <input id="cardName" type="text" placeholder="Cardholder Name" class="input-box">
+                <input id="cardNumber" type="text" placeholder="Card Number" class="input-box">
+                <input id="cardExpiry" type="text" placeholder="Expiry Date (MM/YY)" class="input-box">
+                <input id="cardCVV" type="text" placeholder="CVV" class="input-box">
+
+                <button class="payment-btn" onclick="cardPayNow()">Pay Now</button>
+                <button class="cancel-btn" onclick="backToOptions()">Back</button>
+            </div>
+
+
+            <!-- PAGE 3: WALLET FORM -->
+            <div id="walletForm" style="display:none;">
+                <h2>Wallet Payment</h2>
+
+                <input id="walletProvider" type="text" placeholder="Wallet Provider (Vodafone / Etisalat / Orange)"
+                    class="input-box">
+                <input id="walletPhone" type="text" placeholder="Phone Number" class="input-box">
+
+                <button class="payment-btn" onclick="walletPayNow()">Pay Now</button>
+                <button class="cancel-btn" onclick="backToOptions()">Back</button>
+            </div>
+
+
+            <!-- PAGE 4: CASH MESSAGE -->
+            <div id="cashForm" style="display:none;">
+                <h2>Cash on Delivery</h2>
+                <p style="margin-bottom:20px;">You will pay when your order arrives 📦💵</p>
+
+                <button class="payment-btn" onclick="cashConfirm()">Confirm Order</button>
+                <button class="cancel-btn" onclick="backToOptions()">Back</button>
+            </div>
+
+
+        </div>
+    </div>
+
+    <button id="clearCart">Clear Cart</button>
+
+
+    <!-- ✅ ALL JS SHOULD BE HERE AT THE END -->
+    <script>
+        const modal = document.getElementById("paymentModal");
+        const checkoutBtn = document.getElementById("checkoutBtn");
+        const closeModal = document.getElementById("closeModal");
+
+        checkoutBtn.addEventListener("click", () => {
+            modal.style.display = "flex";
+        });
+
+        closeModal.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+
+    <script src="cart.js"></script>
+    <script src="auth.js"></script>
+
+</body>
+
+</html>

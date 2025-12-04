@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <!-- CSS Link -->
     <link rel="stylesheet" href="./Feedback.css">
-    <title>Feedback</title> 
+    <title>Feedback</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -13,18 +13,15 @@
 </head>
 
 <body>
-   <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo"><video src="books (1).mp4" width="50px" autoplay muted loop></video></div>
         <ul>
-            <li> <img src="login (1).png" alt="" width="20px"><a href="index.html">Home</a></li>
-            <li><img src="open-book.png" alt="" width="20px"><a href="#">Books</a></li>
-            <li><img src="shopping-cart.png" alt="" width="20px"><a href="#">Cart</a></li>
-            <li><img src="feedback.png" alt="" width="20px"><a href="Feedback.html">Feedback</a></li>
-
+            <li id="home-link"> <img src="home.png" alt="" width="20px"><a href="index.html">Home</a></li>
+            <li id="books-link"><img src="open-book.png" alt="" width="20px"><a onclick="goToBooks()">Books</a></li>
+            <li id="cart-link"><img src="shopping-cart.png" alt="" width="20px"><a href="cart.html">Cart</a></li>
+            <li id="feedback-link"><img src="feedback.png" alt="" width="20px"><a href="Feedback.html">Feedback</a></li>
         </ul>
-        <button class="Login-btn">Login</button>
-
+        <a id="Login-btn">Login</a>
     </nav>
 
     <!-- Feedback section -->
@@ -32,68 +29,53 @@
         <div class="feedback-card">
             <h2 class="feedback-title">Leave feedback</h2>
             <p class="feedback-subtitle">
-              We'd love to hear what went well or how we can improve your bookstore experience.
+                We'd love to hear what went well or how we can improve your bookstore experience.
             </p>
             <!-- Feedback form -->
             <form class="feedback-form" id="feedbackForm" action="#" method="post">
 
-               <!-- Name field -->
-               <div class="form-group">
-                  <label for="name">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Your name"
-                    required
-                 />
+                <!-- Name field -->
+                <div class="form-group">
+                    <label for="fbName">Name</label>
+                    <input type="text" id="fbName" name="name" placeholder="Your name" required />
                 </div>
 
-               <!-- Email field -->
-               <div class="form-group">
-                 <label for="email">Email</label>
-                 <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="your@email.com"
-                  required
-                 />
+                <!-- Email field -->
+                <div class="form-group">
+                    <label for="fbEmail">Email</label>
+                    <input type="email" id="fbEmail" name="email" placeholder="your@email.com" required />
                 </div>
 
-               <!-- Feedback area -->
-               <div class="form-group">
-                 <label for="message">Your feedback</label>
-                 <textarea
-                   id="message"
-                   name="message"
-                   rows="4"
-                   placeholder="Your feedback..."
-                   required
-                 ></textarea>
-                </div>     
+                <!-- Feedback area -->
+                <div class="form-group">
+                    <label for="fbMessage">Your feedback</label>
+                    <textarea id="fbMessage" name="message" rows="4" placeholder="Your feedback..." required></textarea>
+                </div>
+
+
+
                 <!-- Emoji rating -->
-               <div class="emoji-row">
-                 <label class="emoji-btn">
-                   <input type="radio" name="feeling" value="bad" />
-                   <span>😥</span>
-                 </label>
+                <div class="emoji-row">
+                    <label class="emoji-btn">
+                        <input type="radio" name="feeling" value="bad" />
+                        <span>😥</span>
+                    </label>
 
-                 <label class="emoji-btn">
-                  <input type="radio" name="feeling" value="okay" />
-                  <span>😐</span>
-                 </label>
+                    <label class="emoji-btn">
+                        <input type="radio" name="feeling" value="okay" />
+                        <span>😐</span>
+                    </label>
 
-                 <label class="emoji-btn">
-                  <input type="radio" name="feeling" value="good" />
-                  <span>😊</span>
-                 </label>
+                    <label class="emoji-btn">
+                        <input type="radio" name="feeling" value="good" />
+                        <span>😊</span>
+                    </label>
                 </div>
-
-              <!-- Submit button -->
-              <button type="submit" class="submit-btn">Submit</button>
-              <!-- Success message -->
-              <p id="successMessage" class="success-message">Thank you! Your feedback has been submitted successfully.</p>
+                <!-- Submit button with ID -->
+                <button type="submit" id="fbSubmit" class="submit-btn">Submit</button>
+                <!-- Success message -->
+                <p id="successMessage" class="success-message">Thank you! Your feedback has been submitted successfully.
+                </p>
             </form>
         </div>
     </section>
@@ -137,18 +119,51 @@
             <p>© 2025 BookStore. All rights reserved.</p>
         </div>
     </footer>
+    <script src="auth.js"></script>
     <script>
-        //form submission handling
+        // Get form + fields
         const form = document.getElementById('feedbackForm');
-        const successMsg = document.getElementById('successMessage'); 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            successMsg.textContent = 'Thank you! Your feedback has been submitted successfully.';
-            successMsg.style.display = 'block';
-            form.reset();
-        });
+        const nameField = document.getElementById('fbName');
+        const emailField = document.getElementById('fbEmail');
+        const msgField = document.getElementById('fbMessage');
+        const submitBtn = document.getElementById('fbSubmit');
+        const successMsg = document.getElementById('successMessage');
+
+        // Check login status
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+        if (isLoggedIn !== "true") {
+            // Disable inputs
+            nameField.disabled = true;
+            emailField.disabled = true;
+            msgField.disabled = true;
+
+            // Style submit button as disabled
+            submitBtn.style.opacity = "0.5";
+            submitBtn.style.cursor = "not-allowed";
+
+            // Override click behavior
+            submitBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                alert("Please login first to leave feedback.");
+                window.location.href = "signin.html";
+            });
+
+        } else {
+            // Normal feedback submit
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                successMsg.textContent = 'Thank you! Your feedback has been submitted successfully.';
+                successMsg.style.display = 'block';
+
+                form.reset();
+            });
+        }
     </script>
 
 
+
 </body>
+
 </html>
